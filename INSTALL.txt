@@ -1,0 +1,24 @@
+TRADEVERSE ELITE — TRADING TERMINAL STARTER
+
+Files:
+- src/components/MarketTerminal.jsx
+- src/trading-terminal.css
+
+Manual integration in src/App.jsx:
+1) Add imports:
+   import MarketTerminal from './components/MarketTerminal';
+   import './trading-terminal.css';
+
+2) Replace the existing Market pulse NavItem with:
+   <NavItem icon={Globe2} label="Trading terminal" active={section==='Trading terminal'} onClick={()=>setSection('Trading terminal')}/>
+
+3) In the main page conditional, insert this branch before the final generic placeholder:
+   :section==='Trading terminal'?<MarketTerminal/>
+
+4) Commit to the branch Vercel actually deploys, then inspect the build log.
+
+Honest limitations:
+- This starter retrieves crypto quotes/history from CoinGecko's public API. CORS, network availability or provider rate limits can block requests; failures are displayed.
+- Forex, commodities, indices and stocks are listed with source links, but quotes/charts for them remain unavailable until a server-side adapter is added.
+- News, calendar, AI analysis, 3D globe, watchlists/alerts, admin panel and profile are not implemented in this first milestone.
+- This is a market information UI, not a broker or order-entry system.
