@@ -1,3 +1,5 @@
+import MarketTerminal from './components/MarketTerminal';
+import './trading-terminal.css';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Activity, ArrowDownRight, ArrowUpRight, BarChart3, Bell, ChevronDown, CircleHelp, Command, ExternalLink, Globe2, LayoutDashboard, Link2, LogOut, Menu, Plus, RadioTower, Search, Settings2, ShieldCheck, SlidersHorizontal, Wallet, X } from 'lucide-react';
 import { supabase, isConfigured } from './lib/supabase';
